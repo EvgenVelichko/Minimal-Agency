@@ -1,6 +1,4 @@
-/** @format */
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('nav ul li a');
     const header = document.querySelector('header');
@@ -20,10 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const sectionTop = section.offsetTop - headerHeight - 1;
                 const sectionHeight = section.clientHeight;
 
-                if (
-                    scrollY >= sectionTop &&
-                    scrollY < sectionTop + sectionHeight
-                ) {
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
                     current = section.getAttribute('id');
                 }
             }
@@ -31,10 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (
-                link.getAttribute('href') &&
-                link.getAttribute('href').substring(1) === current
-            ) {
+            if (link.getAttribute('href') && link.getAttribute('href').substring(1) === current) {
                 link.classList.add('active');
             }
         });
@@ -42,4 +34,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateNavLinkActiveState();
     window.addEventListener('scroll', updateNavLinkActiveState);
+
+   
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const headerOffset = header ? header.offsetHeight : 0;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+
+         
+            if (window.innerWidth > 768 && this.closest('nav')) {
+                 navLinks.forEach(link => link.classList.remove('active'));
+                 this.classList.add('active');
+            }
+        });
+    });
 });

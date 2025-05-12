@@ -8,9 +8,8 @@
         <title>Minimal - Digital Creative Agency</title>
         <link
             rel="shortcut icon"
-            href="./src/assets/logo.png"
+            href="./src/assets/Favicon/favicon.png"
             type="image/x-icon" />
-        <link rel="stylesheet" href="./styles.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -22,15 +21,17 @@
         <link
             href="https://unpkg.com/aos@2.3.1/dist/aos.css"
             rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <header>
             <div class="container">
                 <div class="site-logo">
-                    <img
-                        src="./src/assets/logo (2).png"
-                        alt="Minimal Logo"
-                        style="height: 30px; margin-right: 10px" />Minimal
+                    <a href="#main-banner">
+                        <img
+                            src="./src/assets/logotop.png"
+                            alt="Minimal Logo" />Minimal
+                    </a>
                 </div>
 
                 <nav id="mobile-nav">
@@ -59,10 +60,10 @@
 
         <section class="section-agency-intro" id="agency-intro">
             <div class="container" data-aos="fade-up">
-                <h1>
+                <h2>
                     Full-Service Digital <br />
                     Creative Agency
-                </h1>
+                </h2>
                 <p>
                     Minimalist is a full-service digital creative agency located
                     in Ontario Canada. We focus on design, consulting,
@@ -81,7 +82,7 @@
                     <h2>Services</h2>
                 </div>
                 <div class="services-grid">
-                    <div
+                    <article
                         class="service-card"
                         data-aos="fade-up"
                         data-aos-delay="100">
@@ -93,8 +94,8 @@
                             We craft visually stunning interfaces that engage
                             users and reflect your brand identity.
                         </p>
-                    </div>
-                    <div
+                    </article>
+                    <article
                         class="service-card"
                         data-aos="fade-up"
                         data-aos-delay="200">
@@ -106,8 +107,8 @@
                             Our developers bring designs to life with clean,
                             efficient code and seamless functionality.
                         </p>
-                    </div>
-                    <div
+                    </article>
+                    <article
                         class="service-card"
                         data-aos="fade-up"
                         data-aos-delay="300">
@@ -119,7 +120,7 @@
                             We build and activate brands through cultural
                             insight, strategic vision, and the power of design.
                         </p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -144,7 +145,7 @@
                     </div>
                     <div class="about-image" data-aos="fade-left">
                         <img
-                            src="./src/assets/IMAGE (1).jpg"
+                            src="./src/assets/Man1Img.jpg"
                             alt="About Us Image" />
                     </div>
                 </div>
@@ -240,7 +241,7 @@
                         data-aos="fade-up"
                         data-aos-delay="100">
                         <img
-                            src="./src/assets/IMAGE (1).jpg"
+                            src="./src/assets/ManTeam.png"
                             alt="Team Member Sarah Johnson" />
                         <h3>Sarah Johnson</h3>
                         <p>Creative Director</p>
@@ -250,7 +251,7 @@
                         data-aos="fade-up"
                         data-aos-delay="200">
                         <img
-                            src="./src/assets/IMAGE (12).png"
+                            src="./src/assets/WomenTeam.png"
                             alt="Team Member Zoe Carter" />
                         <h3>Zoe Carter</h3>
                         <p>Lead Designer</p>
@@ -260,7 +261,7 @@
                         data-aos="fade-up"
                         data-aos-delay="300">
                         <img
-                            src="./src/assets/IMAGE (13).png"
+                            src="./src/assets/ManTeam2.png"
                             alt="Team Member David Kim" />
                         <h3>David Kim</h3>
                         <p>Lead Developer</p>
@@ -270,7 +271,7 @@
                         data-aos="fade-up"
                         data-aos-delay="400">
                         <img
-                            src="./src/assets/IMAGE (14).png"
+                            src="./src/assets/WomenTeam2.png"
                             alt="Team Member Amy Chen" />
                         <h3>Amy Chen</h3>
                         <p>Project Manager</p>
@@ -342,10 +343,10 @@
                         <div class="contact-details">
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <p>
+                                <address>
                                     123 Creative Street, Design District<br />Vancouver,
                                     BC
-                                </p>
+                                </address>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
@@ -389,20 +390,29 @@
             <div class="container">
                 <div class="footer-grid">
                     <div class="social-links-left">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="#" target="_blank"
+                            ><i class="fab fa-twitter"></i
+                        ></a>
                     </div>
                     <div class="site-logo-footer">
                         <div class="site-logo">
-                            <img
-                                src="./src/assets/logo.png"
-                                alt="Minimal Logo"
-                                style="height: 30px" />Minimal
+                            <a href="#main-banner">
+                                <img
+                                    src="./src/assets/Favicon/favicon.png"
+                                    alt="Minimal Logo" />Minimal
+                            </a>
                         </div>
                     </div>
                     <div class="social-links-right">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a href="#" target="_blank"
+                            ><i class="fab fa-linkedin-in"></i
+                        ></a>
                     </div>
                 </div>
                 <div class="copyright">
@@ -411,7 +421,7 @@
             </div>
         </footer>
 
-        <script src="./src/services/script.js"></script>
+        <script src="script.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init({
