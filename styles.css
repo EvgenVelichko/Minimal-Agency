@@ -1,8 +1,10 @@
+/** @format */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
 
 :root {
-    --primary-color: #00B6C7;
+    --primary-color: #00b6c7;
     --dark-color: #333;
     --light-color: #f9f9f9;
     --grey-color: #777;
@@ -13,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +25,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Oswald', sans-serif;
 }
 
@@ -131,7 +137,7 @@ nav ul li a.active {
 
 .main-banner {
     padding: 180px 0 100px;
-    background-image: url("./src/assets/Header.png");
+    background-image: url('./src/assets/Header.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -261,7 +267,8 @@ article.service-card:hover {
     margin-bottom: 20px;
 }
 
-.service-icon i, .service-icon img {
+.service-icon i,
+.service-icon img {
     font-size: 30px;
     color: white;
     height: auto;
@@ -344,7 +351,7 @@ article.service-card p {
     left: 0;
     width: 100%;
     padding: 20px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
     color: white;
 }
 
@@ -662,4 +669,8 @@ article.service-card p {
     .contact-wrapper {
         gap: 30px;
     }
+}
+
+div:has(> [data-aos='fade-left']) {
+    overflow-x: hidden;
 }
